@@ -1,26 +1,17 @@
-# tournois-rl-api
+# Tournois RL (API)
 
-a [Sails v1](https://sailsjs.com) application
+## Contexte
+Cette API s'inscrit dans un de mes projets de cours de l'année dernière. Je devais réaliser une application avec React qui consommait une API. Seulement voilà, ce projet (que ce soit l'application back avec l'API faite avec Laravel, ou l'application front avec React) était hébergé sur le serveur de mon IUT et cet été, tout mon espace a été supprimé, et (bien évidemment) je n'avais pas fait de copie du projet.
 
+J'ai pu récupérer la partie front puisqu'elle était sur le git de mon université, seulement comme je n'avais pas utilisé git pour la partie API, celle-ci est définitivement perdue.
 
-### Links
+Ce pourquoi je profite de ce projet pour la refaire (:
 
-+ [Sails framework documentation](https://sailsjs.com/get-started)
-+ [Version notes / upgrading](https://sailsjs.com/documentation/upgrading)
-+ [Deployment tips](https://sailsjs.com/documentation/concepts/deployment)
-+ [Community support options](https://sailsjs.com/support)
-+ [Professional / enterprise options](https://sailsjs.com/enterprise)
+## Fonctionnalités
+L'application est composée de 3 CRUD : Un pour les joueurs, un pour les équipes, et un pour les tournois.
 
+## Technologies utilisées
+L'application a été réalisée avec Sails, un framework MVC pour Node.js.
 
-### Version info
-
-This app was originally generated on Thu Nov 11 2021 19:07:41 GMT+0100 (heure normale d’Europe centrale) using Sails v1.5.0.
-
-<!-- Internally, Sails used [`sails-generate@2.0.4`](https://github.com/balderdashy/sails-generate/tree/v2.0.4/lib/core-generators/new). -->
-
-
-
-<!--
-Note:  Generators are usually run using the globally-installed `sails` CLI (command-line interface).  This CLI version is _environment-specific_ rather than app-specific, thus over time, as a project's dependencies are upgraded or the project is worked on by different developers on different computers using different versions of Node.js, the Sails dependency in its package.json file may differ from the globally-installed Sails CLI release it was originally generated with.  (Be sure to always check out the relevant [upgrading guides](https://sailsjs.com/upgrading) before upgrading the version of Sails used by your app.  If you're stuck, [get help here](https://sailsjs.com/support).)
--->
-
+## CI/CD
+Ecoutez, pour l'instant on va déjà essayer d'avoir une api qui fonctionne en local, ce sera bien hein
