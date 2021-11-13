@@ -38,5 +38,5 @@ jobs:
         run: dpl --provider=heroku --app=${{secrets.HEROKU_APP}} --api-key=${{secrets.HEROKU_API_KEY}} --skip_cleanup=true
 
       # Lancer l'appli
-      - name: "Lift app"
-        run: node app.js --prod
+      # - name: "Lift app"
+      #   run: node app.js --prod
