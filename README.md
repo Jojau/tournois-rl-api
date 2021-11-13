@@ -14,4 +14,4 @@ L'application est composée de 3 CRUD : Un pour les joueurs, un pour les équipe
 L'application a été réalisée avec Sails, un framework MVC pour Node.js.
 
 ## CI/CD
-Ecoutez, pour l'instant on va déjà essayer d'avoir une api qui fonctionne en local, ce sera bien hein
+Bon je tente de deployer l'appli sur Heroku, ça n'a pas l'air d'avoir marché car j'avais désactivé les actions (?)
