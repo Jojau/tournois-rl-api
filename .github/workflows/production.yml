@@ -1,0 +1,37 @@
+name: CI/CD production
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  ci-cd:
+    name: CI/CD Production
+    runs-on: ubuntu-latest
+
+    steps:
+      # Nécessaire pour avoir accès au code du repo
+      - name: "Init repository"
+        uses: actions/checkout@v2
+
+      # Installer les dépendances
+      - name: "Setup Node"
+        uses: actions/setup-node@v2
+        with:
+          node-version: '17'
+
+      - name: "Install dependencies"
+        run: npm install
+
+      # La deployer sur Heroku
+      - name: "Install Ruby"
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+
+      - name: "Install DPL"
+        run: gem install dpl
+
+      - name: "Deploy to Heroku"
+        run: dpl --provider=heroku --app=${{secrets.HEROKU_APP}} --api-key=${{secrets.HEROKU_API_KEY}} --skip_cleanup=true
