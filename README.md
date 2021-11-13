@@ -15,3 +15,4 @@ L'application a été réalisée avec Sails, un framework MVC pour Node.js.
 
 ## CI/CD
 Bon je tente de deployer l'appli sur Heroku, ça n'a pas l'air d'avoir marché car j'avais désactivé les actions (?)
+Désolé on recommence encore une fois, j'avais pas autorisé toutes les actions :(
