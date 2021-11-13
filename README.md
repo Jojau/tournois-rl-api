@@ -14,7 +14,8 @@ L'application est composée de 3 CRUD : Un pour les joueurs, un pour les équipe
 L'application a été réalisée avec Sails, un framework MVC pour Node.js.
 
 ## CI/CD
-Bon je tente de deployer l'appli sur Heroku, ça n'a pas l'air d'avoir marché car j'avais désactivé les actions (?)
-Désolé on recommence encore une fois, j'avais pas autorisé toutes les actions :(
-Ok mais est-ce que lancer l'appli sert vraiment à quelque chose en fait ?
-Parce que si je le laisse ça tourne en boucle, et quand j'ai annulé le truc dans GitHub, ben ça marchait quand même après ?
+J'ai crée deux workflows : Un pour la "pré-production", et un pour la production.
+Le premier se déclenche lors d'un "push" ou d'une PR sur la branche "pre-prod". Il installe les dépendances du projet et le déploie sur Heroku. Etrangement je n'ai pas besoin de build ou démarrer l'application dans le workflow, j'ai l'impression que Heroku s'en charge tout seul. La branche "pre-prod" est déployée à l'adresse suivante : https://tournois-rl-api-preprod.herokuapp.com/
+
+Le second ne se déclenche que lors d'une PR sur la branche "main" (puisqu'en effet nous sommes censés ne jamais faire de push directement sur main) et pour le moment, il fait exactement la même chose, mais cette fois-ci à cette adresse : https://tournois-rl-api.herokuapp.com/
+J'aurais aimé le déployer sur mon hébergement OVH, mais il faut un abonnement "Pro", ce qui n'est pas mon cas malheureusement.

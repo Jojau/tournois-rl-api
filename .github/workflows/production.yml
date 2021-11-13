@@ -1,17 +1,16 @@
-name: CI/CD
+name: CI/CD production
 
 on:
-  push:
+  pull_request:
     branches:
-     - pre-prod
+      - main
 
 jobs:
   ci-cd:
-    name: CI/CD
+    name: CI/CD Production
     runs-on: ubuntu-latest
 
     steps:
-
       # Nécessaire pour avoir accès au code du repo
       - name: "Init repository"
         uses: actions/checkout@v2
@@ -36,7 +35,3 @@ jobs:
 
       - name: "Deploy to Heroku"
         run: dpl --provider=heroku --app=${{secrets.HEROKU_APP}} --api-key=${{secrets.HEROKU_API_KEY}} --skip_cleanup=true
-
-      # Lancer l'appli
-      # - name: "Lift app"
-      #   run: node app.js --prod
