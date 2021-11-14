@@ -20,10 +20,10 @@ J'ai créé deux workflows : Un pour la pré-production, et un pour la productio
 
 Les deux worflows ont les mêmes étapes :
 
- * Installer les dépendances du projet
- * Lancer un test. En effet je n'étais pas sûre que le nombre d'étapes de mon workflow était suffisant au vu des consignes, j'ai donc essayé d'y ajouter un test (ce que je n'avais jamais fait dans aucune de mes précédentes applications).
- * Deployer l'application sur Heroku. C'est là la seule différence entre les workflows de pré-production et de production, l'adresse à laquelle le projet est déployé :
-  * Pré-production : https://tournois-rl-api-preprod.herokuapp.com/
-  * Production : https://tournois-rl-api.herokuapp.com/
+  * Installer les dépendances du projet
+  * Lancer un test. En effet je n'étais pas sûre que le nombre d'étapes de mon workflow était suffisant au vu des consignes, j'ai donc essayé d'y ajouter un test (ce que je n'avais jamais fait dans aucune de mes précédentes applications).
+  * Deployer l'application sur Heroku. C'est là la seule différence entre les workflows de pré-production et de production, l'adresse à laquelle le projet est déployé :
+    * Pré-production : https://tournois-rl-api-preprod.herokuapp.com/
+    * Production : https://tournois-rl-api.herokuapp.com/
 
 Étrangement je n'ai pas besoin de build ou démarrer l'application dans le workflow, j'ai l'impression que Heroku s'en charge tout seul. De plus j'aurais aimé pouvoir déployer la version de production sur mon hébergement OVH, mais il faut un abonnement "Pro", ce qui n'est pas mon cas malheureusement.
