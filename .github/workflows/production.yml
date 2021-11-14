@@ -24,6 +24,10 @@ jobs:
       - name: "Install dependencies"
         run: npm install
 
+      # Passer des tests
+      - name: "Run tests"
+        run: npm test
+
       # La deployer sur Heroku
       - name: "Install Ruby"
         uses: ruby/setup-ruby@v1
